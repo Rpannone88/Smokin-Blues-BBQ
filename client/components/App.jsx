@@ -1,19 +1,15 @@
-import React from 'react';
-import Cats from './Cats.jsx';
+import React, { useState } from 'react';
+import ContactForm from './ContactForm.jsx';
 
-class App extends React.Component {
-  constructor(props) {
-    super(props)
-  }
-
-  render() {
+export default function App () {
+    const [isOpen, setIsOpen] = useState(false)
     return (
-      <div>
-        <h1>App.js is connected and working!</h1>
-        <Cats />
+      <div className="App">
+        <span className="title">Pannone's Pig Roast</span>
+        <span className="form" onClick={() => setIsOpen(true)}>Click To Contact</span>
+        <ContactForm open={isOpen} onClose={() => setIsOpen(false)}>
+        </ContactForm>
       </div>
     )
   }
-}
 
-export default App;

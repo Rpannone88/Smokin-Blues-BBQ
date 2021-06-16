@@ -1,0 +1,130 @@
+body{
+  background-color: grey;
+  background-image: url(https://i.imgur.com/YpV54Ki.jpeg);
+}
+.App{
+  color: white;
+}
+.title{
+  font-family: 'Indie Flower', cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+}
+.form{
+  font-family: 'Open Sans', sans-serif;
+  cursor: pointer;
+}
+.contact-form{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid #FFF;
+  border-radius: 10px;
+  padding: 50px;
+  z-index: 1000;
+  width: 350px;
+  height: auto;
+}
+.overlay-styles{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .7);
+  z-index: 1000;
+}
+.close {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+}
+.close:hover {
+  opacity: 1;
+}
+.close:before, .close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: #FFF;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
+.form-title{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 25px;
+  color:#FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-subtitle{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  color:#FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px;
+}
+.form-labels{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color:#FFF;
+}
+.form-labels-footer{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 8px;
+  color:#FFF;
+  margin-bottom: 5px;
+}
+.form-inputs{
+  background: transparent;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  color:#FFF;
+  border: 1px solid #FFF;
+  border-radius: 5px;
+  width: 350px;
+  margin-bottom: 3px;
+}
+.submit-button{
+ padding:0.35em 1.2em;
+ border:0.1em solid #FFFFFF;
+ border-radius:0.12em;
+ box-sizing: border-box;
+ font-family: 'Open Sans', sans-serif;
+ font-weight:300;
+ text-align:center;
+ transition: all 0.2s;
+ background: transparent;
+ cursor: pointer;
+ color:#FFF;
+ margin-top:5px;
+ display: flex;
+ margin-left:auto;
+ margin-right:auto;
+ width:auto;
+}
+.submit-button:hover{
+ color:#000000;
+ background-color:#FFFFFF;
+ letter-spacing: .07em;
+}
+.error{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 9px;
+  color:#FFF
+}
