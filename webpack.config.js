@@ -11,10 +11,10 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(js|jsx|png|jpg|gif)$/,
         exclude: /(node_modules)/,
         use: {
-          loader: 'babel-loader',
+          loader: 'babel-loader', 'url-loader',
           options: {
             presets: ['@babel/preset-react', '@babel/preset-env']
           }
@@ -22,5 +22,16 @@ module.exports = {
       }
     ]
   }
-
 };
+
+// {
+//   test: /\.(png|jpg|gif)$/i,
+//   use: [
+//     {
+//       loader: 'url-loader',
+//       options: {
+//         limit: 8192,
+//       },
+//     },
+//   ],
+// }
