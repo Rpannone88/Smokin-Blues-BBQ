@@ -26,7 +26,7 @@ export default function App () {
         <img className="icon" src="./dist/images/IG-Icon.png"/>
         <img className="icon" src="./dist/images/Twitter-Logo.png"/>
       <div>
-        <AboutMe openAbout={openAbout}/>
+        <AboutMe openAbout={openAbout} onClose={() => setOpenAbout(false)}/>
       </div>
       </div>
         <ContactForm open={isOpen} onClose={() => setIsOpen(false)}>
