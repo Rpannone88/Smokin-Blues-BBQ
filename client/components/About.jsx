@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import jump from 'jump.js';
 
 export default function About() {
   return (
@@ -11,7 +12,9 @@ export default function About() {
       Moore than fades will provide exceptional service, out going enthusiastic barbers and an inviting atmosphere. Our main focus is customer service and satisfaction. We strive to personalize each service to fit individual needs.
       </p>
     </div>
-    <div className="keep-it-going">Keep it going</div>
+    <div className="see-menu"
+      onClick={() => {jump('.whole-menu-title')}}
+      >Check the menu</div>
     </>
   )
 }

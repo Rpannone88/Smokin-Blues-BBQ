@@ -18,12 +18,14 @@ export default function Header() {
           </span>
           <span
             className="header-links"
-            onClick={() => {jump('.form-wrapper')}}
-            > Contact</span>
-          <span
-            className="header-links">
+            onClick={() => {jump('.whole-menu-title')}}
+            >
             Menu
           </span>
+          <span
+            className="header-links"
+            onClick={() => {jump('.form-wrapper')}}
+            > Contact</span>
         </div>
       </div>
     </>

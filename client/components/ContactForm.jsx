@@ -16,7 +16,7 @@ export default function ContactForm (){
     console.log(formSubmitObj)
   };
 
-  return ReactDom.createPortal(
+  return(
     <>
       <div className="form-wrapper">
         <div className="contact-form">
@@ -173,8 +173,7 @@ export default function ContactForm (){
         </form>
         </div>
       </div>
-    </>,
-  document.getElementById('portal')
+    </>
   )
 };
 

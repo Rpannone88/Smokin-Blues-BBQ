@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Footer({ setIsOpen}) {
+export default function Footer() {
   return (
     <div className="footer">
       <span className="footer-text"
