@@ -1,31 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
 import jump from 'jump.js';
 
 export default function Header() {
+  const [navbar, setNavbar] = useState(false)
+  const changeNav = () => {
+    if(window.scrollY > 100) setNavbar(true)
+    else setNavbar(false)
+  }
+  window.addEventListener('scroll', changeNav)
   return (
     <>
       <img src="/dist/images/bbq-pic.png" className="hero-fixed"/>
-      <div className="header">
+
+      <div className={navbar ? "header active" : "header"}>
+
        <div className="header-left"
           onClick={() => {jump('.whole-landing')}}
-          >Smokin' Blues BBQ</div>
+          >SMOKIN' BLUES</div>
         <div className="header-right">
           <span
             className="header-links"
             onClick={() => {jump('.about')}}
             >
-            About
+            ABOUT
           </span>
           <span
             className="header-links"
-            onClick={() => {jump('.whole-menu-title')}}
+            onClick={() => {jump('.menu-wrapper')}}
             >
-            Menu
+            MENU
           </span>
           <span
             className="header-links"
             onClick={() => {jump('.form-wrapper')}}
-            > Contact</span>
+            > CONTACT</span>
         </div>
       </div>
     </>

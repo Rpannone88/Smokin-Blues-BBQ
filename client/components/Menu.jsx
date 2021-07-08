@@ -2,47 +2,33 @@ import React from 'react';
 import jump from 'jump.js';
 
 export default function Menu() {
+  const meats = ["Pulled Pork", "Beef", "Chicken", "Turkey", "Vegan"];
+  const sides = ["BBQ Beans", "Potato Salad", "Greens Salad", "Corn", "Macaroni Salad"];
+  const desserts = ["Cupcakes", "Pies", "Ice Cream", "Birthday Cake"];
+  const drinks = ["Soda/Pop", "Bottled Water", "Iced Tea", "Lemonade"];
   return (
   <>
-    <div className="whole-menu-title">CHOW LIST</div>
-    <div className="menu-container">
-      <div className="menu-list1">
-        <div className="menu-title">Meats</div>
-          <div className="menu-sub">Pork</div>
-          <div className="menu-sub">Beef</div>
-          <div className="menu-sub">Chicken</div>
-          <div className="menu-sub">Turkey</div>
-          <div className="menu-sub">Vegan</div>
+    <div className="menu-wrapper">
+      <h1 className="menu-header">CHOW LIST</h1>
+
+      <div className="meats">
+        <h2 className="menu-list-header">The Meats</h2>
+          <ul>
+            {meats.map(meat => (
+              <li className="menu-list-item">{meat}</li>
+          ))}
+          </ul>
       </div>
-      <div className="menu-list2">
-        <div className="menu-title">Sides</div>
-          <div className="menu-sub">BBQ Beans</div>
-          <div className="menu-sub">Corn</div>
-          <div className="menu-sub">Mac & Chee</div>
-          <div className="menu-sub">Potato Salad</div>
-          <div className="menu-sub">Greens Salad</div>
+      <div className="sides">
+        <h2 className="menu-list-header">The Sides</h2>
+          <ul>
+            {sides.map(side => (
+              <li className="menu-list-item">{side}</li>
+          ))}
+          </ul>
       </div>
-      <div className="menu-list3">
-        <div className="menu-title">Dessert</div>
-          <div className="menu-sub"> Cake</div>
-          <div className="menu-sub"> Apple Pie</div>
-          <div className="menu-sub"> Ice Cream</div>
-          <div className="menu-sub"> Doughnuts</div>
-          <div className="menu-sub"> Chocolate Cake</div>
-      </div>
-      <div className="menu-list4">
-        <div className="menu-title">Drinks</div>
-          <div className="menu-sub">Soda/Pop</div>
-          <div className="menu-sub">Bottled Water</div>
-          <div className="menu-sub">Lemonade</div>
-          <div className="menu-sub">Iced Tea</div>
-          <div className="menu-sub">Coffee</div>
-      </div>
+
     </div>
-      <div className="get-in-touch"
-        onClick={() => {jump(".form-wrapper")}}
-        >Get in touch
-      </div>
   </>
   )
 }
