@@ -10,7 +10,6 @@ export default function Menu() {
   <>
     <div className="menu-wrapper">
       <h1 className="menu-header">CHOW LIST</h1>
-
       <div className="meats">
         <h2 className="menu-list-header">The Meats</h2>
           <ul>
@@ -27,7 +26,6 @@ export default function Menu() {
           ))}
           </ul>
       </div>
-
     </div>
   </>
   )

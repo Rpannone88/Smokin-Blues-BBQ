@@ -11,9 +11,7 @@ export default function Header() {
   return (
     <>
       <img src="/dist/images/bbq-pic.png" className="hero-fixed"/>
-
       <div className={navbar ? "header active" : "header"}>
-
        <div className="header-left"
           onClick={() => {jump('.whole-landing')}}
           >SMOKIN' BLUES</div>
